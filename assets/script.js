@@ -1,19 +1,23 @@
 const slides = [
 	{
 		"image": "slide1.jpg",
-		"tagLine": "Impressions tous formats <span>en boutique et en ligne</span>"
+		"tagLine": "Impressions tous formats <span>en boutique et en ligne</span>",
+		"alt": "Impression d'une photo"
 	},
 	{
 		"image": "slide2.jpg",
-		"tagLine": "Tirages haute définition grand format <span>pour vos bureaux et events</span>"
+		"tagLine": "Tirages haute définition grand format <span>pour vos bureaux et events</span>",
+		"alt": "Salle open space de Print it!"
 	},
 	{
 		"image": "slide3.jpg",
-		"tagLine": "Grand choix de couleurs <span>de CMJN aux pantones</span>"
+		"tagLine": "Grand choix de couleurs <span>de CMJN aux pantones</span>",
+		"alt" : "Etablissement d'une charte graphique"
 	},
 	{
 		"image": "slide4.png",
-		"tagLine": "Autocollants <span>avec découpe laser sur mesure</span>"
+		"tagLine": "Autocollants <span>avec découpe laser sur mesure</span>",
+        "alt" : "Autocollants de cartoons"
 	}
 ]
 
@@ -59,7 +63,7 @@ function nextSlides() {
 		dotCount = count + 1;
 	}
 	document.querySelector(".banner-img").src = './assets/images/slideshow/' + slides[count].image;
-	document.querySelector(".banner-img").alt = slides[count].tagLine;
+	document.querySelector(".banner-img").alt = slides[count].alt;
 	document.querySelector("p").innerHTML = slides[count].tagLine;
 	document.querySelector('.dot:nth-of-type(' + dotCount + ')').className = "dot_selected dot";
 }
@@ -75,7 +79,7 @@ function backSlides() {
 		dotCount = count + 1;
 	}
 	document.querySelector(".banner-img").src = './assets/images/slideshow/' + slides[count].image;
-	document.querySelector(".banner-img").alt = slides[count].tagLine;
+	document.querySelector(".banner-img").alt = slides[count].alt;
 	document.querySelector("p").innerHTML = slides[count].tagLine;
 	document.querySelector('.dot:nth-of-type(' + dotCount + ')').className = "dot_selected dot";
 }
